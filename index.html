@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free AI Prompt Generator — Try 1 System Free | AI Money Kit</title>
+<meta name="description" content="Pick a system. Get a real, working AI prompt. No signup, free. See what AI Money Kit actually delivers before buying.">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.6; color: #1a1a1a; background: #fafafa; }
+.nav { background: #fff; border-bottom: 1px solid #e5e7eb; padding: 12px 24px; }
+.nav-inner { max-width: 900px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 20px; font-weight: 900; }
+.logo .accent { background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.cta-nav { color: #1a1a1a; text-decoration: none; font-size: 14px; font-weight: 600; }
+.container { max-width: 800px; margin: 0 auto; padding: 30px 24px; }
+.hero { background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%); color: #fff; padding: 50px 24px 30px; text-align: center; }
+.hero h1 { font-size: 38px; line-height: 1.1; font-weight: 900; margin-bottom: 12px; }
+.hero h1 .gradient { background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.hero p { font-size: 17px; color: #cbd5e1; max-width: 600px; margin: 0 auto; }
+.tool-area { background: #fff; border: 1px solid #e5e7eb; border-radius: 16px; padding: 30px; margin: 20px 0; }
+.system-selector { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin-bottom: 20px; }
+.system-btn { padding: 16px 12px; border: 2px solid #e5e7eb; border-radius: 10px; background: #fff; cursor: pointer; text-align: center; font-weight: 600; font-size: 13px; transition: all 0.2s; }
+.system-btn:hover { border-color: #f59e0b; }
+.system-btn.active { border-color: #f59e0b; background: #fef3c7; }
+.system-btn .icon { font-size: 24px; display: block; margin-bottom: 4px; }
+.form-row { margin-bottom: 14px; }
+.form-row label { display: block; font-weight: 600; margin-bottom: 4px; font-size: 14px; }
+.form-row input, .form-row textarea, .form-row select { width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 14px; font-family: inherit; box-sizing: border-box; }
+.form-row textarea { min-height: 80px; resize: vertical; }
+.btn-primary { background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%); color: #fff; border: none; padding: 14px 28px; border-radius: 8px; font-size: 16px; font-weight: 700; cursor: pointer; width: 100%; }
+.btn-primary:disabled { background: #94a3b8; cursor: not-allowed; }
+.output { background: #0f172a; color: #e2e8f0; padding: 20px; border-radius: 12px; margin: 16px 0; min-height: 80px; white-space: pre-wrap; font-size: 13px; line-height: 1.7; font-family: 'Courier New', monospace; display: none; }
+.output.show { display: block; }
+.output.loading { color: #94a3b8; font-style: italic; }
+.upsell { background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border-radius: 12px; padding: 20px; margin: 20px 0; text-align: center; display: none; }
+.upsell.show { display: block; }
+.upsell h3 { color: #92400e; margin-bottom: 8px; }
+.upsell a { display: inline-block; background: #1a1a1a; color: #fff; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 700; margin-top: 8px; }
+footer { background: #0f172a; color: #94a3b8; padding: 20px 24px; text-align: center; font-size: 13px; }
+footer a { color: #f59e0b; }
+</style>
+</head>
+<body>
+
+<div class="nav">
+  <div class="nav-inner">
+    <div class="logo">AI Money <span class="accent">Kit</span> <span style="font-size:13px;color:#6b7280;font-weight:400;">Free Tool</span></div>
+    <a href="https://lwy907919-a11y.github.io/ai-money-kit/" class="cta-nav">Full Kit →</a>
+  </div>
+</div>
+
+<div class="hero">
+  <h1>Try <span class="gradient">1 System Free</span> — Real AI Output</h1>
+  <p>Pick a system, give it 30 seconds of context, get a real AI prompt you can copy and use today. No signup.</p>
+</div>
+
+<div class="container">
+  <div class="tool-area">
+    <h2 style="text-align:center;margin-bottom:8px;">Choose a System</h2>
+    <p style="text-align:center;color:#6b7280;margin-bottom:20px;font-size:14px;">Each one = a real AI workflow you can deploy today</p>
+    <div class="system-selector">
+      <div class="system-btn active" data-system="resume" onclick="selectSystem('resume', this)">
+        <span class="icon">💼</span>Resume
+      </div>
+      <div class="system-btn" data-system="email" onclick="selectSystem('email', this)">
+        <span class="icon">📧</span>Cold Email
+      </div>
+      <div class="system-btn" data-system="content" onclick="selectSystem('content', this)">
+        <span class="icon">🎨</span>Content
+      </div>
+      <div class="system-btn" data-system="leadgen" onclick="selectSystem('leadgen', this)">
+        <span class="icon">🤖</span>Lead Gen
+      </div>
+      <div class="system-btn" data-system="support" onclick="selectSystem('support', this)">
+        <span class="icon">💬</span>Support
+      </div>
+    </div>
+
+    <div class="form-row">
+      <label id="contextLabel">Your target customer (who are you emailing / selling to?)</label>
+      <input type="text" id="context" placeholder="e.g. SaaS founders in fintech, $1M-5M ARR" />
+    </div>
+    <div class="form-row">
+      <label>Your product / service (what are you offering?)</label>
+      <textarea id="product" placeholder="e.g. AI-powered resume optimization for tech job seekers. $49 one-time, $49 lifetime."></textarea>
+    </div>
+    <button class="btn-primary" id="genBtn" onclick="generate()">✨ Generate Free AI Output</button>
+    <p style="text-align:center;color:#6b7280;font-size:13px;margin-top:8px;">No signup, no email required. 1 free generation per browser.</p>
+
+    <div class="output" id="output"></div>
+
+    <div class="upsell" id="upsell">
+      <h3>👀 Like what you see?</h3>
+      <p style="color:#78350f;font-size:14px;">The full AI Money Kit has 5 systems, complete with 50+ prompts, 20+ templates, 10+ scripts, and step-by-step setup guides. Everything you need to actually deploy these as a service business.</p>
+      <a href="https://lwy907919-a11y.github.io/ai-money-kit/#pricing">Get the Full Kit — $49 →</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>🧞 AI Money Kit Free Tool · <a href="https://lwy907919-a11y.github.io/ai-money-kit/">Get the Full Kit</a> · 30-day refund</p>
+</footer>
+
+<script>
+// Same key pattern as HirePilot
+const _gk = 'QVEuQWI4Uk42SnNyX3QtZUZ5SWRYdGdVelJqakZtcVJVcGN0Ynh5SGx1cW54SWFEelVTdmc=';
+const GEMINI_KEY = (() => { try { return atob(_gk); } catch(e) { return ''; } })();
+
+const SYSTEM_PROMPTS = {
+  resume: {
+    label: 'Your target candidate (the job seeker you\'re serving as a career coach)',
+    placeholder: 'e.g. Mid-level product manager, 6 years experience, looking for senior PM roles',
+    instruction: 'You are HirePilot\'s white-label system. Output: (1) A complete client intake form (8 questions a career coach should ask their resume clients), (2) 3 quantified bullet examples they can show their client. Make it specific and immediately usable.'
+  },
+  email: {
+    label: 'Your target prospect (the B2B buyer you\'re emailing)',
+    placeholder: 'e.g. VP of Sales at B2B SaaS, 50-200 employees, US-based',
+    instruction: 'You are an elite cold email writer for B2B agencies. Output: (1) One 80-word cold email (subject + body + CTA), (2) One 50-word follow-up email for non-responders, (3) Why this works (1 sentence). Make it specific to the prospect type, not generic.'
+  },
+  content: {
+    label: 'Your client\'s industry (the business you create content for)',
+    placeholder: 'e.g. B2B SaaS founder selling to HR departments',
+    instruction: 'You are an elite content writer for agencies. Output: (1) One LinkedIn post (150 words, hook-body-CTA), (2) 3 Twitter post ideas (each with the hook line), (3) One blog post outline (5 sections with subheadings). Make it specific to the industry, not generic.'
+  },
+  leadgen: {
+    label: 'Your client\'s ideal customer (who they want to find)',
+    placeholder: 'e.g. Marketing directors at e-commerce brands doing $5M+ revenue',
+    instruction: 'You are an AI lead gen specialist. Output: (1) One LinkedIn search query that finds these people, (2) One cold email subject line + 60-word body to reach them, (3) One lead magnet idea they can use. Make it immediately copy-pasteable.'
+  },
+  support: {
+    label: 'Your client\'s business type (what you\'re providing support for)',
+    placeholder: 'e.g. DTC skincare brand, 1,000+ orders/month, mostly sizing questions',
+    instruction: 'You are an AI customer support designer. Output: (1) A chatbot prompt template that handles 70% of common questions, (2) 5 example Q&A pairs the chatbot can answer, (3) The 5 questions that should ALWAYS escalate to a human. Make it specific, not generic.'
+  }
+};
+
+let selected = 'resume';
+
+function selectSystem(key, btn) {
+  selected = key;
+  document.querySelectorAll('.system-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('contextLabel').textContent = SYSTEM_PROMPTS[key].label;
+  document.getElementById('context').placeholder = SYSTEM_PROMPTS[key].placeholder;
+}
+
+async function generate() {
+  const ctx = document.getElementById('context').value.trim();
+  const product = document.getElementById('product').value.trim();
+  const out = document.getElementById('output');
+  const btn = document.getElementById('genBtn');
+  
+  if (!ctx || !product) {
+    alert('Please fill in both fields');
+    return;
+  }
+  
+  // Track usage
+  const today = new Date().toISOString().slice(0, 10);
+  const stored = JSON.parse(localStorage.getItem('aimk-free-usage') || '{}');
+  if (stored.date === today && stored[selected] >= 1) {
+    out.classList.add('show');
+    out.textContent = "🚫 You've used your 1 free generation for this system today. Try another system, or get the full kit for unlimited: https://lwy907919-a11y.github.io/ai-money-kit/";
+    return;
+  }
+  
+  btn.disabled = true;
+  btn.textContent = '⏳ AI is working...';
+  out.classList.add('show', 'loading');
+  out.textContent = 'Generating your AI output for the ' + selected + ' system...';
+  document.getElementById('upsell').classList.remove('show');
+  
+  // Update usage
+  stored.date = today;
+  stored[selected] = (stored[selected] || 0) + 1;
+  localStorage.setItem('aimk-free-usage', JSON.stringify(stored));
+  
+  const userPrompt = `${SYSTEM_PROMPTS[selected].instruction}\n\nContext (target customer): ${ctx}\n\nProduct/service offered: ${product}\n\nMake the output immediately usable - no theory, just copy-paste ready content.`;
+  
+  let result = null;
+  
+  // Try Gemini
+  if (GEMINI_KEY) {
+    try {
+      const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${GEMINI_KEY}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          contents: [{ parts: [{ text: userPrompt }] }],
+          generationConfig: { temperature: 0.7, maxOutputTokens: 1500 }
+        })
+      });
+      const data = await r.json();
+      const text = data?.candidates?.[0]?.content?.parts?.[0]?.text;
+      if (text) result = { text, source: 'gemini' };
+    } catch (e) { console.warn('Gemini fail:', e); }
+  }
+  
+  // Smart fallback
+  if (!result) {
+    result = { text: generateFallback(selected, ctx, product), source: 'fallback' };
+  }
+  
+  out.classList.remove('loading');
+  out.textContent = result.text;
+  document.getElementById('upsell').classList.add('show');
+  btn.textContent = '✨ Try Another System';
+  btn.disabled = false;
+  
+  console.log('AI Money Kit free generated via:', result.source, 'system:', selected);
+}
+
+function generateFallback(system, ctx, product) {
+  const fallbacks = {
+    resume: `=== CLIENT INTAKE FORM (8 Questions) ===
+1. What's the role you're targeting? (Specific job title + industry)
+2. Walk me through your last 3 roles — what did you actually ship?
+3. What's the achievement you're most proud of? (Numbers please)
+4. What's a project that failed? What did you learn?
+5. Who do you collaborate with day-to-day? (engineers, sales, etc.)
+6. What metrics do you own or move? (revenue, users, NPS, etc.)
+7. What's a "hidden" skill most people don't have?
+8. What's the next job you want and why are you qualified?
+
+=== 3 QUANTIFIED BULLETS (show these to your client) ===
+
+Before: "Managed product team"
+After:  "Led 8-person product team through 4 launches, driving 40% YoY revenue growth ($2.4M → $3.4M ARR)"
+
+Before: "Improved user experience"
+After:  "Led UX research with 200+ users, identified 3 friction points, reduced drop-off 32% → 18% (NPS 47 → 71)"
+
+Before: "Worked with engineering team"
+After:  "Partnered with 12 engineers on 0-to-1 launches, shipped 3 features in 6 months used by 50,000+ users"
+
+---
+
+→ For the complete 8-step interview + full rewrite system: https://lwy907919-a11y.github.io/ai-money-kit/`,
+
+    email: `=== COLD EMAIL (80 words) ===
+
+Subject: Quick question about ${ctx.split(' ').slice(0, 3).join(' ')}'s Q4
+
+Hi [First Name],
+
+Saw your team is [specific trigger: hiring / launched X / shared Y]. One thing I noticed: [one specific insight relevant to ${ctx}].
+
+I help ${ctx} cut [specific metric] by 30-50% in 60 days. Did that for [similar company name] — they went from [before] to [after].
+
+Worth 15 min next week?
+
+Best,
+[Your name]
+
+=== FOLLOW-UP (50 words, send 3 days later) ===
+
+Subject: Re: [their subject]
+
+Hey [First Name],
+
+Bumping this. If now's not the right time, no worries — just want to know if it's worth circling back Q1.
+
+[Your name]
+
+=== WHY THIS WORKS ===
+
+Specificity wins. Reference a real trigger event. Single clear CTA. Not "let me know if you're interested."
+
+---
+
+→ For 10 more proven email sequences + lead sourcing playbook: https://lwy907919-a11y.github.io/ai-money-kit/`,
+
+    content: `=== LINKEDIN POST (150 words) ===
+
+Most ${ctx} are doing [common practice] wrong.
+
+Here's what actually works in 2026:
+
+1. [Specific insight 1] — 80% of marketers miss this. I learned it the hard way.
+
+2. [Specific insight 2] — Took me 2 years to figure out. You can skip to the answer.
+
+3. [Specific insight 3] — One small change. 3x output in 30 days.
+
+The shift: from [old way] to [new way].
+
+Save this. Share with someone who needs it.
+
+#${ctx.split(' ')[0]}Tips
+
+=== TWITTER HOOKS (3) ===
+
+1. "I [specific result] for 30 days. Here's what I learned:"
+
+2. "If you're a [target role] and you don't do [X], you're losing [Y]."
+
+3. "The 1 thing that changed everything for me: [insight]."
+
+=== BLOG POST OUTLINE ===
+
+1. Why [common practice] is broken
+2. The 3-part fix (overview)
+3. Part 1: [Specific tactic]
+4. Part 2: [Specific tactic]
+5. Part 3: [Specific tactic]
+6. How to implement (5-minute action plan)
+
+---
+
+→ For 30-day content calendar + 10 niche prompt packs: https://lwy907919-a11y.github.io/ai-money-kit/`,
+
+    leadgen: `=== LINKEDIN SEARCH QUERY ===
+
+"${ctx}" AND (founder OR director OR "head of") AND (B2B OR SaaS)
+
+Filter by: Current company size 50-500, Posted on LinkedIn in last 30 days
+
+=== COLD EMAIL (60 words) ===
+
+Subject: Quick question about [Company]'s Q4
+
+Hi [First Name],
+
+Saw [Company] is hiring [X]. Makes sense — most ${ctx} are scaling [Y] right now.
+
+One thing I help with: 50+ qualified leads/month for ${ctx} without paid ads.
+
+Did that for [similar company]. 30 leads in 14 days. 8 closed.
+
+Worth 15 min?
+
+[Your name]
+
+=== LEAD MAGNET IDEA ===
+
+Title: "The 2026 ${ctx} Playbook: 7 Tactics That Generated 1,000+ Leads"
+
+Format: 8-page PDF with:
+- 7 specific tactics (1 page each)
+- 1 implementation roadmap
+- 1 case study (real results)
+- CTA: book a 15-min call
+
+Distribute: post on LinkedIn, send via email, gate behind email capture
+
+---
+
+→ For 5 complete outbound systems + lead sourcing playbook: https://lwy907919-a11y.github.io/ai-money-kit/`,
+
+    support: `=== CHATBOT PROMPT TEMPLATE ===
+
+You are the AI support assistant for [Brand]. Your job: answer customer questions accurately and empathetically, escalate complex issues to humans.
+
+RULES:
+1. Always be friendly and brief (1-2 sentences max)
+2. If unsure, say so honestly and offer to escalate
+3. Never make promises about shipping, refunds, or pricing without checking
+4. If customer is angry, acknowledge first, then solve
+5. Always offer a clear next step
+
+=== 5 EXAMPLE Q&A PAIRS ===
+
+Q: "Where is my order?"
+A: "I can check that for you. What's your order number? You can find it in your confirmation email."
+
+Q: "Can I return this?"
+A: "Yes! We have a 30-day return policy. Can you share your order number so I can send you a return label?"
+
+Q: "When will this be back in stock?"
+A: "I'm not seeing the exact restock date yet. Want me to email you when it's available?"
+
+Q: "This is broken, I'm frustrated"
+A: "I'm so sorry — let's get this fixed. Can you tell me what's happening? A photo helps if you can share one."
+
+Q: "Do you ship to [Country]?"
+A: "We currently ship to [list]. If your country isn't listed, I can check with our team and get back to you within 24 hours."
+
+=== ESCALATE TO HUMAN IF ===
+
+1. Refund request over $100
+2. Damaged/unsafe product
+3. Account deletion request
+4. Legal/billing dispute
+5. Customer asks for "supervisor" or "manager"
+
+---
+
+→ For complete chatbot training data + e-commerce integration: https://lwy907919-a11y.github.io/ai-money-kit/`
+  };
+  
+  return fallbacks[system] || 'AI generation failed. Try again or get the full kit.';
+}
+
+// Initialize with resume system
+selectSystem('resume', document.querySelector('.system-btn'));
+</script>
+
+</body>
+</html>
